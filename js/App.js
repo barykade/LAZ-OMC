@@ -44,7 +44,11 @@ var saveMap = function(){
             return;
         }
 
-        location.href = "load-map.php?mapId="+json.mapId;
+        if(json.status == "success"){
+            location.href = "load-map.php?mapId="+json.mapId;
+        }else{
+            alert(json.status);
+        }
     });
 }
 
