@@ -20,11 +20,9 @@ function preload() {
 
 }
 
-var storeMapImage = function(callback) {
-    var base64 = canvas.toDataURL();
-    $("#theme").removeClass("disabled", 200);
-    shownLink = true;
-    $.post("ajax/send.php", {"image": true, "base64": base64, "id": thisMapID}, function(response) {
+var saveAsNewMap = function(){
+    var mapData = JSON.stringify(grid.getClasses());
+    $.post("posts.php", {"action":"saveAsNewMap", "baseMapsId":baseMapsId, "mapData":mapData}, function(response){
         var json = JSON.parse(response);
 
         if(json.error) {
@@ -32,49 +30,9 @@ var storeMapImage = function(callback) {
             return;
         }
 
-        callback();
+        location.href = "load-map.php?mapId="+json.mapId;
     });
-};
-
-var storeMapImageForked = function() {
-    var base64 = canvas.toDataURL();
-    $("#theme").removeClass("disabled", 200);
-    shownLink = true;
-    $.post("ajax/send.php", {"image": true, "base64": base64, "id": thisMapID}, function(response) {
-        var json = JSON.parse(response);
-
-        if(json.error) {
-            alert(json.errormessage);
-            return;
-        }
-
-        if(json.imglink) {
-            var $link = $("<a style='padding:3px;' class='btn btn-inverse btn-mini' target='_blank' href='img/map/"+thisMapID+".jpg'></a>");
-            $link.hide();
-            $link.html("<span class='icon-picture icon-white'></span>");
-            $("#authorname").prepend($link);
-            $link.fadeIn(500);
-        }
-    });
-};
-
-
-var fillMapData = function(mapID, themeID) {
-    thisMapID = mapID;
-    MapEditor.View.enableRating();
-    $.post("http://omc.wappdesign.net/ajax/get.php", {"id": mapID}, function(response) {
-        var json = JSON.parse(response);
-
-        if(json.error) {
-            alert(json.errormessage);
-            return;
-        }
-
-        MapEditor.Model.setTheme(parseInt(themeID, 10));
-        grid.setClasses(json, ctx);
-
-    });
-};
+}
 
 var onRedraw = function() {
     if(loading <= 0) {
@@ -111,8 +69,6 @@ $(document).ready(function() {
     target = document.getElementById("mapwrapper");
     spinner = new Spinner(opts).spin(target).stop();
     //loadspinner = new Spinner(opts).spin(target);
-
-    loadMapData(1);
 
     preload(
         "tiles/scallywags_t1.png",

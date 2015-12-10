@@ -105,8 +105,11 @@ MapEditor.View = (function() {
     $("button#mapSelectionBtn").click(function(e) {
         e.preventDefault();
         e.stopImmediatePropagation();
+        location.href = "load-map.php?mapId="+$(this).attr("title");
+    });
 
-        loadMapData($(this).attr("title"));
+    $("#saveAsNewMapBtn").click(function(){
+        saveAsNewMap();
     });
 
     $("button#theme").click(function(e) {

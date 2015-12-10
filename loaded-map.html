@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/jquery.rating.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/spin.min.js"></script>
+	<script src="js/jquery.rating.pack.js"></script>
+	<script src="js/jquery.metadata.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+</head>
+
+<body class="scallywags">
+
+<div class="mapSelection">
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="1">Candy Core Mine</button>
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="2">Sugar Rock</button>
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="3">Acrospire</button>
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="4">Blitz Beach</button>
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="5">Mechanism</button>
+	<button id="mapSelectionBtn" class="mapSelectionBtn" title="6">Machination</button>
+</div>
+
+<button id="saveAsNewMapBtn" class="saveAsNewMapBtn">Save as New Map</button>
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a title="tab1" href="#tab1">Place Mode</a></li>
+        <li><a title="moveMode" href="#moveMode">Move Mode</a></li>
+    </ul>
+</div>
+
+
+<div id="palette" class="blue">
+	<div id="tab1" class="tab active">
+		<p>Miscellaneous</p>
+		<div class="terrain" id="" title="Remove Terrain">X</div>
+		<div class="unit" id="rmv" title="Remove Unit"></div>
+
+		<div id="player_race" class="scallywags">
+			<hr style='clear:both;'/>
+			<p>Terrain</p>
+			<div class="terrain selected" id='t1' title="Terrain #1"></div>
+			<div class="terrain" id='t2' title="Terrain #2"></div>
+			<div class="terrain" id='t3' title="Terrain #3"></div>
+			<div class="terrain" id='t4' title="Terrain #4"></div>
+			<div class="terrain" id="bonus" title="Bonus Space"></div>
+			<div class="terrain" id="s" title="Spawn Point"></div>
+
+			<hr style='clear:both;'/>
+			<p>Obstacles</p>
+			<div class="terrain" id='o1' title="Obstacle #1"></div>
+			<div class="terrain" id='o2' title="Obstacle #2"></div>
+			<div class="terrain" id='o3' title="Obstacle #3"></div>
+
+			<hr style='clear:both;'/>
+			<p>Bases</p>
+			<div class="terrain" id='b' title="Base"></div>
+
+			<hr style='clear:both;'/>
+			
+			<p>Units</p>
+			<div class="unit" id="runner" title="Runner"></div>
+			<div class="unit" id="soldier" title="Soldier"></div>
+			<div class="unit" id="medic" title="Medic"></div>
+			<div class="unit" id="sniper" title="Sniper"></div>
+			<div class="unit" id="heavy" title="Heavy"></div>
+			<div class="unit" id="feedback_special" title="Scrambler"></div>
+			<div class="unit" id="scallywags_special" title="Bombshell"></div>
+			<div class="unit" id="adorables_special" title="Mobi"></div>
+			<div class="unit" id="veggienauts_special" title="Bramble"></div>
+		</div>
+
+		<hr style='clear:both;'/>
+		<p>Players</p>
+		<div class="color selected" id="blue" title="Player 1"></div>
+		<div class="color" id="red" title="Player 2"></div>
+		<div class="color" id="green" title="Player 3"></div>
+		<div class="color" id="yellow" title="Player 4"></div>
+
+		<hr style='clear:both;'/>
+		<p>Race</p>
+		<div class="race selected" id="race_scallywags" title="scallywags"></div>
+		<div class="race" id="race_feedback" title="feedback"></div>
+		<div class="race" id="race_adorables" title="adorables"></div>
+		<div class="race" id="race_veggienauts" title="veggienauts"></div>
+
+	    <hr style='clear:both;'/>
+	    <p>Health</p>
+	    <div class="health" id="health1" title="1"></div>
+	    <div class="health" id="health2" title="2"></div>
+	    <div class="health" id="health3" title="3"></div>
+	    <div class="health" id="health4" title="4"></div>
+	    <div class="health" id="health5" title="5"></div>
+
+		<hr style='clear:both;'/>
+
+	</div>
+	
+	<div id="moveMode" class="tab">
+        <button class="back" id="backBtn" title="Back Button">Back</button>
+        <button class="fwdBtn" id="fwdBtn" title="Forward Button">Forward</button>
+        <hr style='clear:both;'/>
+
+		<hr style='clear:both;'/>
+        <div class="moveModeColor" id="blue" title="Player 1"></div>
+        Wits: <input id="blueWits" class="witCounter" data-color="blue" type="text" maxlength="4" size="4" value="0" ></input>
+
+        <hr style='clear:both;'/>
+        <div class="moveModeColor" id="red" title="Player 2"></div>
+        Wits: <input id="redWits" class="witCounter" data-color="red" type="text" maxlength="4" size="4" value="0" ></input>
+
+        <hr style='clear:both;'/>
+        <div class="moveModeColor" id="green" title="Player 3"></div>
+        Wits: <input id="greenWits" class="witCounter" data-color="green"  type="text" maxlength="4" size="4" value="0" ></input>
+
+
+        <hr style='clear:both;'/>
+        <div class="moveModeColor" id="yellow" title="Player 4"></div>
+        Wits: <input id="yellowWits" class="witCounter" data-color="yellow" type="text" maxlength="4" size="4" value="0" ></input>
+
+        <hr style='clear:both;'/>
+        <button id="replayBtn" title="Replay Button">Show Current Replay</button>
+        <hr style='clear:both;'/>
+
+		<div id="moveModeUnits" class="scallywags" style="display:none">	
+			<p>Units</p>
+			<div class="unit" id="runner" title="Runner"></div>
+			<div class="unit" id="soldier" title="Soldier"></div>
+			<div class="unit" id="medic" title="Medic"></div>
+			<div class="unit" id="sniper" title="Sniper"></div>
+			<div class="unit" id="heavy" title="Heavy"></div>
+			<div class="unit" id="feedback_special" title="Scrambler"></div>
+			<div class="unit" id="scallywags_special" title="Bombshell"></div>
+			<div class="unit" id="adorables_special" title="Mobi"></div>
+			<div class="unit" id="veggienauts_special" title="Bramble"></div>
+		</div>
+
+	</div>
+</div>
+
+<div id="headline">
+	<div id="fork">
+		<button id="theme" class="btn btn-inverse btn-small "><span class='icon-retweet icon-white'></span>Change Theme</button>
+		</div>
+			<p id="mapname">Map Name</p>
+		</div>
+	<div id='mapwrapper'>
+	<canvas id="map" height="700" width="700"></canvas>
+</div>
+
+<script src="js/Config.js"></script>
+<script src="js/mapData.js"></script>
+<script src="js/Hexagon.js"></script>
+<script src="js/Grid.js"></script>
+<script src="js/Functions.js"></script>
+<script src="js/Model.js"></script>
+<script src="js/View.js"></script>
+<script src="js/App.js"></script>
+
+<?php
+	if(isset($mapId)){
+?>
+<script type="text/javascript">
+	loadMapData(<?php echo "'".$mapName."'" ?>, <?php echo "'".$mapTheme."'" ?>, <?php echo "'".$mapData."'" ?>);
+	baseMapsId = <?php echo "'".$baseMapsId."'" ?>;
+</script>
+<?php
+	}else{
+		echo "error loading map: unknown id";
+	}
+?>
+
+</body>
+</html>
