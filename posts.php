@@ -1,6 +1,7 @@
 <?php
 include("mysql.php");
-if($_POST["action"] == "saveAsNewMap"){
+$postAction = $_POST["action"];
+if($postAction == "saveAsNewMap"){
 	$baseMapsId = $_POST["baseMapsId"];
 	$mapData = $_POST["mapData"];
 	$sql = "INSERT INTO maps
@@ -16,7 +17,7 @@ if($_POST["action"] == "saveAsNewMap"){
 
 	$mapId = $result["map_id"];
 	echo '{"status":"success", "mapId":'.$mapId.'}';
-}else if($_POST["action"] == "saveMap"){
+}else if($postAction == "saveMap"){
 	$mapId = $_POST["mapId"];
 	if($mapId > 6){
 		$mapData = $_POST["mapData"];
@@ -28,5 +29,11 @@ if($_POST["action"] == "saveAsNewMap"){
 	}else{
 		echo '{"status":"failure: Cannot overwrite base maps"}';
 	}
+}else if($postAction == "saveAsNewReplay"){
+
+}else if($postAction == "overwriteReplay"){
+
+}else if($postAction == "deleteReplay"){
+	
 }
 ?>

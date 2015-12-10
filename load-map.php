@@ -12,6 +12,8 @@ if(isset($_GET["mapId"])){
 	$mapName = $result["map_name"];
 	$mapTheme = $result["map_theme"];
 	$mapData = $result["map_data"];
+
+	//retrieve replay data
 }
 include("loaded-map.html");
 ?>
