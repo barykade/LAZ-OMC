@@ -16,5 +16,13 @@ if($_POST["action"] == "saveAsNewMap"){
 
 	$mapId = $result["map_id"];
 	echo '{"status":"success", "mapId":'.$mapId.'}';
+}else if($_POST["action"] == "saveMap"){
+	$mapId = $_POST["mapId"];
+	$mapData = $_POST["mapData"];
+	$sql = "UPDATE maps
+			SET map_data='$mapData'
+			WHERE map_id=$mapId";
+	$query = mysql_query($sql);
+	echo '{"status":"success", "mapId":'.$mapId.'}';
 }
 ?>

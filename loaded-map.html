@@ -27,7 +27,9 @@
 	<button id="mapSelectionBtn" class="mapSelectionBtn" title="6">Machination</button>
 </div>
 
+<br>
 <button id="saveAsNewMapBtn" class="saveAsNewMapBtn">Save as New Map</button>
+<button id="saveMapBtn" class="saveMapBtn">Save and Overwrite Current Map</button>
 
 <div class="tabs">
     <ul class="tab-links">
@@ -147,7 +149,6 @@
 
 <div id="headline">
 	<div id="fork">
-		<button id="theme" class="btn btn-inverse btn-small "><span class='icon-retweet icon-white'></span>Change Theme</button>
 		</div>
 			<p id="mapname">Map Name</p>
 		</div>
@@ -170,6 +171,7 @@
 <script type="text/javascript">
 	loadMapData(<?php echo "'".$mapName."'" ?>, <?php echo "'".$mapTheme."'" ?>, <?php echo "'".$mapData."'" ?>);
 	baseMapsId = <?php echo "'".$baseMapsId."'" ?>;
+	currentMapId = <?php echo "'".$mapId."'" ?>;
 </script>
 <?php
 	}else{

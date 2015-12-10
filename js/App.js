@@ -34,6 +34,20 @@ var saveAsNewMap = function(){
     });
 }
 
+var saveMap = function(){
+    var mapData = JSON.stringify(grid.getClasses());
+    $.post("posts.php", {"action":"saveMap", "mapId":currentMapId, "mapData":mapData}, function(response){
+        var json = JSON.parse(response);
+
+        if(json.error) {
+            alert(json.errormessage);
+            return;
+        }
+
+        location.href = "load-map.php?mapId="+json.mapId;
+    });
+}
+
 var onRedraw = function() {
     if(loading <= 0) {
         if(loadspinner) {

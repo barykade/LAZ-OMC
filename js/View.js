@@ -112,24 +112,8 @@ MapEditor.View = (function() {
         saveAsNewMap();
     });
 
-    $("button#theme").click(function(e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        if(themeChanging || $(this).hasClass("disabled")) return;
-
-        themeChanging = true;
-        if($("#other").hasClass("selected")) {
-            model.setClass("t1");
-            $("#other").removeClass();
-            $("#t1").addClass("selected");
-        }
-
-        model.swapTheme();
-        var oldClass = $("body").attr("class");
-        $("body").switchClass(oldClass, model.getTheme(), 300, function() {
-            grid.updateImages(ctx);
-            themeChanging = false;
-        });
+    $("#saveMapBtn").click(function(){
+        saveMap();
     });
 
     $("div.moveModeColor").click(function(e) {

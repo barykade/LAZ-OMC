@@ -1,4 +1,5 @@
 var baseMapsId;
+var currentMapId;
 function loadMapData(mapName, mapTheme, mapData){
 	
     var json = JSON.parse(mapData);
