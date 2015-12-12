@@ -4,8 +4,16 @@ $postAction = $_POST["action"];
 if($postAction == "saveAsNewMap"){
 	$baseMapsId = $_POST["baseMapsId"];
 	$mapData = $_POST["mapData"];
+	$player1Race = $_POST["player1Race"];
+	$player2Race = $_POST["player2Race"];
+	$player3Race = $_POST["player3Race"];
+	$player4Race = $_POST["player4Race"];
+	$player1Wits = $_POST["player1Wits"];
+	$player2Wits = $_POST["player2Wits"];
+	$player3Wits = $_POST["player3Wits"];
+	$player4Wits = $_POST["player4Wits"];
 	$sql = "INSERT INTO maps
-			VALUES (NULL, '$baseMapsId', '$mapData');";
+			VALUES (NULL, '$baseMapsId', '$mapData', '$player1Race', '$player2Race', '$player3Race', '$player4Race', '$player1Wits', '$player2Wits', '$player3Wits', '$player4Wits');";
 	$query = mysql_query($sql);
 
 	$sql = "SELECT maps.map_id

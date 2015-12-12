@@ -23,8 +23,8 @@ function preload() {
 var saveAsNewMap = function(){
     var mapData = JSON.stringify(grid.getClasses());
     var playerRaces = MapEditor.Model.getAllPlayerRaces();
-    var wits = MapEditor.Model.getAllPlayerWits();
-    $.post("posts.php", {"action":"saveAsNewMap", "baseMapsId":baseMapsId, "mapData":mapData}, function(response){
+    var playerWits = MapEditor.Model.getAllPlayerWits();
+    $.post("posts.php", {"action":"saveAsNewMap", "baseMapsId":baseMapsId, "mapData":mapData, "player1Race":playerRaces[0], "player2Race":playerRaces[1], "player3Race":playerRaces[2], "player4Race":playerRaces[3], "player1Wits":playerWits[0], "player2Wits":playerWits[1], "player3Wits":playerWits[2], "player4Wits":playerWits[3]}, function(response){
         var json = JSON.parse(response);
 
         if(json.error) {
