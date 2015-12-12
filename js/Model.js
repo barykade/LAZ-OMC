@@ -75,6 +75,10 @@ MapEditor.Model = (function() {
             return selectedColor;
         },
 
+        getAllPlayerRaces = function(){
+            return selectedPlayerRaces;
+        },
+
         getPlayerRace = function(id){
             return selectedPlayerRaces[id];
         },
@@ -132,6 +136,10 @@ MapEditor.Model = (function() {
             var currPlayer = getCurrentPlayerNum();
             wits[currPlayer] = newWits;
             $("#" + selectedColor + "Wits").val(wits[currPlayer]);
+        },
+
+        getAllPlayerWits = function(){
+            return wits;
         },
 
         getWits = function(){
@@ -212,6 +220,7 @@ MapEditor.Model = (function() {
         setSelectedPlayerRace: setSelectedPlayerRace,
         getSelectedPlayerRace: getSelectedPlayerRace,
         getCurrentPlayerNum: getCurrentPlayerNum,
+        getAllPlayerRaces: getAllPlayerRaces,
         getPlayerRace: getPlayerRace,
         setPlayerRace: setPlayerRace,
         getPlayerColor: getPlayerColor,
@@ -233,6 +242,7 @@ MapEditor.Model = (function() {
         spendWit: spendWit,
         setWits: setWits,
         getWits: getWits,
+        getAllPlayerWits: getAllPlayerWits,
         setWitsForPlayer: setWitsForPlayer,
         getBoardState: getBoardState,
         getMoveQueue: getMoveQueue,
