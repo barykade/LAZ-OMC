@@ -128,7 +128,7 @@ MapEditor.Model = (function() {
 
         spendWit = function(){
             var currPlayer = getCurrentPlayerNum();
-            wits[currPlayer] =  wits[currPlayer] - 1;
+            wits[currPlayer] = wits[currPlayer] - 1;
             $("#" + selectedColor + "Wits").val(wits[currPlayer]);
         },
 
@@ -243,6 +243,7 @@ MapEditor.Model = (function() {
         setWits: setWits,
         getWits: getWits,
         getAllPlayerWits: getAllPlayerWits,
+        setWitsForColor: setWitsForColor,
         setWitsForPlayer: setWitsForPlayer,
         getBoardState: getBoardState,
         getMoveQueue: getMoveQueue,

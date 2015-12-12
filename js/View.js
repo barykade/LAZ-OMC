@@ -68,7 +68,7 @@ MapEditor.View = (function() {
     });
 
     $(".witCounter").change(function(){
-        var inputWits = $( this ).val();
+        var inputWits = $(this).val();
         var witColor = $(this).data("color");
         if(isNaN(inputWits)) return;
         model.setWitsForColor(witColor, parseInt(inputWits));
