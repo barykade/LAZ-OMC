@@ -74,9 +74,14 @@ MapEditor.Model = (function() {
         getCurrentPlayerColor = function(){
             return selectedColor;
         },
+
         getPlayerRace = function(id){
             return selectedPlayerRaces[id];
         },
+
+        setPlayerRace = function(playerIndex, inputRace){
+            selectedPlayerRaces[playerIndex] = inputRace;
+        }
 
         getPlayerColor = function(id){
             return playerColors[id];
@@ -110,6 +115,11 @@ MapEditor.Model = (function() {
         setWitsForColor = function(witColor, inputWits){
             var playerIndex = playerColors.indexOf(witColor);
             wits[playerIndex] = inputWits;
+        },
+
+        setWitsForPlayer = function(playerIndex, inputWits){
+            wits[playerIndex] = inputWits;
+            $("#" + playerColors[playerIndex] + "Wits").val(wits[playerIndex]);
         },
 
         spendWit = function(){
@@ -203,6 +213,7 @@ MapEditor.Model = (function() {
         getSelectedPlayerRace: getSelectedPlayerRace,
         getCurrentPlayerNum: getCurrentPlayerNum,
         getPlayerRace: getPlayerRace,
+        setPlayerRace: setPlayerRace,
         getPlayerColor: getPlayerColor,
         getCurrentPlayerColor: getCurrentPlayerColor,
         getUnit: getUnit,
@@ -222,6 +233,7 @@ MapEditor.Model = (function() {
         spendWit: spendWit,
         setWits: setWits,
         getWits: getWits,
+        setWitsForPlayer: setWitsForPlayer,
         getBoardState: getBoardState,
         getMoveQueue: getMoveQueue,
         isBaseSelected: function() { return selectedClass.match(/^b$/); }

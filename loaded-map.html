@@ -168,11 +168,19 @@
 <?php
 	if(isset($mapId)){
 ?>
-<script type="text/javascript">
-	loadMapData(<?php echo "'".$mapName."'" ?>, <?php echo "'".$mapTheme."'" ?>, <?php echo "'".$mapData."'" ?>);
-	baseMapsId = <?php echo "'".$baseMapsId."'" ?>;
-	currentMapId = <?php echo "'".$mapId."'" ?>;
-</script>
+	<script type="text/javascript">
+		loadMapData(<?php echo "'".$mapName."'" ?>, <?php echo "'".$mapTheme."'" ?>, <?php echo "'".$mapData."'" ?>);
+		baseMapsId = <?php echo "'".$baseMapsId."'" ?>;
+		currentMapId = <?php echo "'".$mapId."'" ?>;
+<?php
+		for($i = 0; $i < 4; $i++){
+?>
+    		MapEditor.Model.setPlayerRace(<?php echo $i ?>, <?php echo "'".$playerRaces[$i]."'" ?>);
+    		MapEditor.Model.setWitsForPlayer(<?php echo $i ?>, <?php echo $playerWits[$i] ?>);
+<?php
+		}
+?>
+	</script>
 <?php
 	}else{
 		echo "error loading map: unknown id";
