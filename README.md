@@ -12,3 +12,4 @@ TODO:
 - Base Health and attacking
 - Update UI for when turn switches when pressing back and forward
 - Save which player is current turn in database
+- Bug where killing anything on spawn point disables the spawn point for the turn
