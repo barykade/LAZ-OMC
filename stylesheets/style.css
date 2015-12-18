@@ -262,6 +262,102 @@ form {
     position: relative;
 }
 
+div.scallywags .moveModeColor#blue{
+    background-size: 50px 50px !important;
+    background: url('../units/scallywags_specialblue.png') -5px -5px no-repeat;
+    background-color: #005995 !important;
+}
+
+div.scallywags .moveModeColor#red{
+    background-size: 50px 50px !important;
+    background: url('../units/scallywags_specialred.png') -5px -5px no-repeat;
+    background-color: #7a1f00 !important;
+}
+
+div.scallywags .moveModeColor#green{
+    background-size: 50px 50px !important;
+    background: url('../units/scallywags_specialgreen.png') -5px -5px no-repeat;
+    background-color: #207300 !important;
+}
+
+div.scallywags .moveModeColor#yellow{
+    background-size: 50px 50px !important;
+    background: url('../units/scallywags_specialyellow.png') -5px -5px no-repeat;
+    background-color: #995e00 !important;
+}
+
+div.feedback .moveModeColor#blue{
+    background-size: 50px 50px !important;
+    background: url('../units/feedback_specialblue.png') -5px -5px no-repeat;
+    background-color: #005995 !important;
+}
+
+div.feedback .moveModeColor#red{
+    background-size: 50px 50px !important;
+    background: url('../units/feedback_specialred.png') -5px -5px no-repeat;
+    background-color: #7a1f00 !important;
+}
+
+div.feedback .moveModeColor#green{
+    background-size: 50px 50px !important;
+    background: url('../units/feedback_specialgreen.png') -5px -5px no-repeat;
+    background-color: #207300 !important;
+}
+
+div.feedback .moveModeColor#yellow{
+    background-size: 50px 50px !important;
+    background: url('../units/feedback_specialyellow.png') -5px -5px no-repeat;
+    background-color: #995e00 !important;
+}
+
+div.adorables .moveModeColor#blue{
+    background-size: 50px 50px !important;
+    background: url('../units/adorables_specialblue.png') -5px -5px no-repeat;
+    background-color: #005995 !important;
+}
+
+div.adorables .moveModeColor#red{
+    background-size: 50px 50px !important;
+    background: url('../units/adorables_specialred.png') -5px -5px no-repeat;
+    background-color: #7a1f00 !important;
+}
+
+div.adorables .moveModeColor#green{
+    background-size: 50px 50px !important;
+    background: url('../units/adorables_specialgreen.png') -5px -5px no-repeat;
+    background-color: #207300 !important;
+}
+
+div.adorables .moveModeColor#yellow{
+    background-size: 50px 50px !important;
+    background: url('../units/adorables_specialyellow.png') -5px -5px no-repeat;
+    background-color: #995e00 !important;
+}
+
+div.veggienauts .moveModeColor#blue{
+    background-size: 50px 50px !important;
+    background: url('../units/veggienauts_specialblue.png') -5px -5px no-repeat;
+    background-color: #005995 !important;
+}
+
+div.veggienauts .moveModeColor#red{
+    background-size: 50px 50px !important;
+    background: url('../units/veggienauts_specialred.png') -5px -5px no-repeat;
+    background-color: #7a1f00 !important;
+}
+
+div.veggienauts .moveModeColor#green{
+    background-size: 50px 50px !important;
+    background: url('../units/veggienauts_specialgreen.png') -5px -5px no-repeat;
+    background-color: #207300 !important;
+}
+
+div.veggienauts .moveModeColor#yellow{
+    background-size: 50px 50px !important;
+    background: url('../units/veggienauts_specialyellow.png') -5px -5px no-repeat;
+    background-color: #995e00 !important;
+}
+
 div.terrain,
 div.unit,
 div.color,

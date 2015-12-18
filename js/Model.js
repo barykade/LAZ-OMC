@@ -52,6 +52,10 @@ MapEditor.Model = (function() {
             return selectedPlayerRaces[playerIndex];
         },
 
+        getSelectedPlayerNum = function() {
+            return playerColors.indexOf(selectedColor) + 1;
+        },
+
         setMoveMode = function(input){
             moveMode = (input == true);
         },
@@ -219,6 +223,7 @@ MapEditor.Model = (function() {
         swapTheme: swapTheme,
         setSelectedPlayerRace: setSelectedPlayerRace,
         getSelectedPlayerRace: getSelectedPlayerRace,
+        getSelectedPlayerNum: getSelectedPlayerNum,
         getCurrentPlayerNum: getCurrentPlayerNum,
         getAllPlayerRaces: getAllPlayerRaces,
         getPlayerRace: getPlayerRace,

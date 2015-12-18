@@ -190,6 +190,10 @@ MapEditor.View = (function() {
         var oldClass = $("#player_race").attr("class");
         $("#player_race").removeClass(oldClass).addClass(model.getSelectedPlayerRace());
 
+        var playerNum = model.getSelectedPlayerNum();
+        var oldPlayerClass = $("#player" + playerNum + "_race").attr("class");
+        $("#player" + playerNum + "_race").removeClass(oldClass).addClass(model.getSelectedPlayerRace());
+
         $(".race.selected").removeClass("selected");
         $(this).addClass("selected");
 
