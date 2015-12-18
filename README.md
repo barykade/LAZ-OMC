@@ -11,5 +11,8 @@ TODO:
 - Create a list of current games visible on the page so you can see all the games we currently have going on
 - Base Health and attacking
 - Update UI for when turn switches when pressing back and forward
+- Update UI when page is first loaded
+  - place mode: units, player races, and race selection
+  - move mode: player races
 - Save which player is current turn in database
 - Bug where killing anything on spawn point disables the spawn point for the turn
