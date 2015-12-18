@@ -262,97 +262,113 @@ form {
     position: relative;
 }
 
-div.scallywags .moveModeColor#blue{
+div.scallywags .moveModeColor#blue,
+div.scallywags .color#blue{
     background-size: 50px 50px !important;
     background: url('../units/scallywags_specialblue.png') -5px -5px no-repeat;
     background-color: #005995 !important;
 }
 
-div.scallywags .moveModeColor#red{
+div.scallywags .moveModeColor#red,
+div.scallywags .color#red{
     background-size: 50px 50px !important;
     background: url('../units/scallywags_specialred.png') -5px -5px no-repeat;
     background-color: #7a1f00 !important;
 }
 
-div.scallywags .moveModeColor#green{
+div.scallywags .moveModeColor#green,
+div.scallywags .color#green{
     background-size: 50px 50px !important;
     background: url('../units/scallywags_specialgreen.png') -5px -5px no-repeat;
     background-color: #207300 !important;
 }
 
-div.scallywags .moveModeColor#yellow{
+div.scallywags .moveModeColor#yellow,
+div.scallywags .color#yellow{
     background-size: 50px 50px !important;
     background: url('../units/scallywags_specialyellow.png') -5px -5px no-repeat;
     background-color: #995e00 !important;
 }
 
-div.feedback .moveModeColor#blue{
+div.feedback .moveModeColor#blue,
+div.feedback .color#blue{
     background-size: 50px 50px !important;
     background: url('../units/feedback_specialblue.png') -5px -5px no-repeat;
     background-color: #005995 !important;
 }
 
-div.feedback .moveModeColor#red{
+div.feedback .moveModeColor#red,
+div.feedback .color#red{
     background-size: 50px 50px !important;
     background: url('../units/feedback_specialred.png') -5px -5px no-repeat;
     background-color: #7a1f00 !important;
 }
 
-div.feedback .moveModeColor#green{
+div.feedback .moveModeColor#green,
+div.feedback .color#green{
     background-size: 50px 50px !important;
     background: url('../units/feedback_specialgreen.png') -5px -5px no-repeat;
     background-color: #207300 !important;
 }
 
-div.feedback .moveModeColor#yellow{
+div.feedback .moveModeColor#yellow,
+div.feedback .color#yellow{
     background-size: 50px 50px !important;
     background: url('../units/feedback_specialyellow.png') -5px -5px no-repeat;
     background-color: #995e00 !important;
 }
 
-div.adorables .moveModeColor#blue{
+div.adorables .moveModeColor#blue,
+div.adorables .color#blue{
     background-size: 50px 50px !important;
     background: url('../units/adorables_specialblue.png') -5px -5px no-repeat;
     background-color: #005995 !important;
 }
 
-div.adorables .moveModeColor#red{
+div.adorables .moveModeColor#red,
+div.adorables .color#red{
     background-size: 50px 50px !important;
     background: url('../units/adorables_specialred.png') -5px -5px no-repeat;
     background-color: #7a1f00 !important;
 }
 
-div.adorables .moveModeColor#green{
+div.adorables .moveModeColor#green,
+div.adorables .color#green{
     background-size: 50px 50px !important;
     background: url('../units/adorables_specialgreen.png') -5px -5px no-repeat;
     background-color: #207300 !important;
 }
 
-div.adorables .moveModeColor#yellow{
+div.adorables .moveModeColor#yellow,
+div.adorables .color#yellow{
     background-size: 50px 50px !important;
     background: url('../units/adorables_specialyellow.png') -5px -5px no-repeat;
     background-color: #995e00 !important;
 }
 
-div.veggienauts .moveModeColor#blue{
+div.veggienauts .moveModeColor#blue,
+div.veggienauts .color#blue{
     background-size: 50px 50px !important;
     background: url('../units/veggienauts_specialblue.png') -5px -5px no-repeat;
     background-color: #005995 !important;
 }
 
-div.veggienauts .moveModeColor#red{
+div.veggienauts .moveModeColor#red,
+div.veggienauts .color#red{
     background-size: 50px 50px !important;
     background: url('../units/veggienauts_specialred.png') -5px -5px no-repeat;
     background-color: #7a1f00 !important;
 }
 
-div.veggienauts .moveModeColor#green{
+div.veggienauts .moveModeColor#green,
+div.veggienauts .color#green{
     background-size: 50px 50px !important;
     background: url('../units/veggienauts_specialgreen.png') -5px -5px no-repeat;
     background-color: #207300 !important;
 }
 
-div.veggienauts .moveModeColor#yellow{
+div.veggienauts .moveModeColor#yellow,
+div.veggienauts .color#yellow{
     background-size: 50px 50px !important;
     background: url('../units/veggienauts_specialyellow.png') -5px -5px no-repeat;
     background-color: #995e00 !important;
