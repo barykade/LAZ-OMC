@@ -190,8 +190,8 @@
 <?php
 		for($i = 0; $i < 4; $i++){
 ?>
-    		MapEditor.Model.setPlayerRace(<?php echo $i ?>, <?php echo "'".$playerRaces[$i]."'" ?>);
-    		MapEditor.Model.setWitsForPlayer(<?php echo $i ?>, <?php echo $playerWits[$i] ?>);
+    		MapEditor.Model.setPlayerRace(<?php echo $i+1 ?>, <?php echo "'".$playerRaces[$i]."'" ?>);
+    		MapEditor.Model.setWitsForPlayer(<?php echo $i+1 ?>, <?php echo $playerWits[$i] ?>);
 <?php
 		}
 ?>

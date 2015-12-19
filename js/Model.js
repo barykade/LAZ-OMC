@@ -88,7 +88,18 @@ MapEditor.Model = (function() {
         },
 
         setPlayerRace = function(playerIndex, inputRace){
-            selectedPlayerRaces[playerIndex] = inputRace;
+            selectedPlayerRaces[playerIndex-1] = inputRace;
+
+            var oldClass = $("#player_race").attr("class");
+            $("#player_race").removeClass(oldClass).addClass(inputRace);
+
+            var oldPlayerClass = $("#player" + playerIndex + "_race").attr("class");
+            $("#player" + playerIndex + "_race").removeClass(oldClass).addClass(inputRace);
+            $("#player" + playerIndex + "_movemode_race").removeClass(oldClass).addClass(inputRace);
+
+            $(".race.selected").removeClass("selected");
+            $(".race#race_"+inputRace).addClass("selected");
+
         }
 
         getPlayerColor = function(id){
@@ -126,8 +137,8 @@ MapEditor.Model = (function() {
         },
 
         setWitsForPlayer = function(playerIndex, inputWits){
-            wits[playerIndex] = inputWits;
-            $("#" + playerColors[playerIndex] + "Wits").val(wits[playerIndex]);
+            wits[playerIndex-1] = inputWits;
+            $("#" + playerColors[playerIndex-1] + "Wits").val(inputWits);
         },
 
         spendWit = function(){

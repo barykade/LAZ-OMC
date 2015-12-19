@@ -185,18 +185,8 @@ MapEditor.View = (function() {
         e.preventDefault();
         e.stopImmediatePropagation();
 
-        model.setSelectedPlayerRace($(this).attr("title"));
-
-        var oldClass = $("#player_race").attr("class");
-        $("#player_race").removeClass(oldClass).addClass(model.getSelectedPlayerRace());
-
         var playerNum = model.getSelectedPlayerNum();
-        var oldPlayerClass = $("#player" + playerNum + "_race").attr("class");
-        $("#player" + playerNum + "_race").removeClass(oldClass).addClass(model.getSelectedPlayerRace());
-        $("#player" + playerNum + "_movemode_race").removeClass(oldClass).addClass(model.getSelectedPlayerRace());
-
-        $(".race.selected").removeClass("selected");
-        $(this).addClass("selected");
+        model.setPlayerRace(playerNum, $(this).attr("title"));
 
         grid.updateImages(ctx);
     });
