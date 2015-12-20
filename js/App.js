@@ -20,6 +20,13 @@ function preload() {
 
 }
 
+var saveReplayAs = function(replayName){
+    var replayData = JSON.stringify(MapEditor.Model.getMoveQueue());
+    if(replayName != "" && replayData != "[]"){
+        alert("Replay Save Post Data Here");
+    }
+}
+
 var saveAsNewMap = function(){
     var mapData = JSON.stringify(grid.getClasses());
     var playerRaces = MapEditor.Model.getAllPlayerRaces();

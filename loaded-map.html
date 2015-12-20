@@ -114,9 +114,6 @@
 	</div>
 	
 	<div id="moveMode" class="tab">
-        <button class="back" id="backBtn" title="Back Button">Back</button>
-        <button class="fwdBtn" id="fwdBtn" title="Forward Button">Forward</button>
-        <hr style='clear:both;'/>
 
         <div id="player1_movemode_race" class="scallywags">
         	<div class="moveModeColor" id="blue" title="Player 1"></div>
@@ -143,8 +140,6 @@
         Wits: <input id="yellowWits" class="witCounter" data-color="yellow" type="text" maxlength="4" size="4" value="0" ></input>
 
         <hr style='clear:both;'/>
-        <button id="replayBtn" title="Replay Button">Show Current Replay</button>
-        <hr style='clear:both;'/>
 
 		<div id="moveModeUnits" class="scallywags" style="display:none">	
 			<p>Units</p>
@@ -157,6 +152,21 @@
 			<div class="unit" id="scallywags_special" title="Bombshell"></div>
 			<div class="unit" id="adorables_special" title="Mobi"></div>
 			<div class="unit" id="veggienauts_special" title="Bramble"></div>
+		</div>
+
+		<div>
+			<h4 style="text-align: center">Current Replay</h4>
+	        <button class="back" id="backBtn" title="Back Button" style="width:116.5px; margin-bottom:5px">Step Back</button>
+	        <button class="fwdBtn" id="fwdBtn" title="Forward Button" style="width:116.5px; margin-bottom:5px">Step Forward</button>
+        	<button id="replayBtn" title="Replay Button" style="width:237px; margin-bottom:5px">Show Current Replay</button>
+        	<button id="saveReplayBtn" title="Save Replay As" style="width:69px;">Save As</button>
+        	<input id="saveReplayName" style="width:160px"></input>
+		</div>
+
+        <hr style='clear:both;'/>
+
+		<div>
+			<h4 style="text-align: center">Saved Replays</h4>
 		</div>
 
 	</div>

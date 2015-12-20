@@ -206,9 +206,11 @@ MapEditor.Model = (function() {
             moveQueue.push(move);
             forwardMoveQueue = [];
         },
+        
         getMoveQueue = function(move){
             return moveQueue;
         },
+
         popForward = function(){
             if(forwardMoveQueue.length == 0) return null;
             moveQueue.push(getBoardState());
@@ -220,8 +222,11 @@ MapEditor.Model = (function() {
                 $("#" + witColor + "Wits").val(witForColor);
             }
             return boardState.hexes;
-        };
+        },
 
+        setMoveQueue = function(moveQueue){
+            moveQueue = moveQueue;
+        };
 
     return {
         getClass: getClass,

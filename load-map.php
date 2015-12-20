@@ -16,6 +16,11 @@ if(isset($_GET["mapId"])){
 	$mapData = $result["map_data"];
 	$playerRaces = array($result["player_1_race"], $result["player_2_race"], $result["player_3_race"], $result["player_4_race"]);
 	$playerWits = array($result["player_1_wits"], $result["player_2_wits"], $result["player_3_wits"], $result["player_4_wits"]);
+	/*
+	$sql = "SELECT replay_data
+			FROM replays
+			WHERE map_id=$mapId";
+	*/
 }
 include("loaded-map.html");
 ?>

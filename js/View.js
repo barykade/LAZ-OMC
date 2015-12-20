@@ -108,6 +108,11 @@ MapEditor.View = (function() {
         location.href = "load-map.php?mapId="+$(this).attr("title");
     });
 
+    $("#saveReplayBtn").click(function(){
+        var replayName = $("#saveReplayName").val();
+        saveReplayAs(replayName);
+    });
+
     $("#saveAsNewMapBtn").click(function(){
         saveAsNewMap();
     });
