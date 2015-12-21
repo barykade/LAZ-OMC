@@ -152,6 +152,8 @@
 			<div class="unit" id="scallywags_special" title="Bombshell"></div>
 			<div class="unit" id="adorables_special" title="Mobi"></div>
 			<div class="unit" id="veggienauts_special" title="Bramble"></div>
+
+			<hr style='clear:both;'/>
 		</div>
 
 		<div>
@@ -167,6 +169,16 @@
 
 		<div>
 			<h4 style="text-align: center">Saved Replays</h4>
+<?php
+			for($i = 0; $i < count($replayArray); $i++){
+?>
+				<button id=<?php echo $i;?> class="savedReplayButton" style = "width:237px; margin-bottom:5px;">
+					<?php echo $replayArray[$i]['replayName']; ?>
+				</button>
+				<br>
+<?php
+			}
+?>
 		</div>
 
 	</div>
@@ -205,6 +217,28 @@
 <?php
 		}
 ?>
+
+		replayData = [
+<?php
+			for($i = 0; $i < count($replayArray); $i++){
+				if($i != 0){ echo ", ";}
+?>
+				<?php echo "'".$replayArray[$i]['replayData']."'"; ?>
+<?php
+			}
+?>
+		];
+
+		replayBoardStates = [
+<?php
+			for($i = 0; $i < count($replayArray); $i++){
+				if($i != 0){ echo ", ";}
+?>
+				<?php echo "'".$replayArray[$i]['currentBoardState']."'"; ?>
+<?php
+			}
+?>
+		];
 	</script>
 <?php
 	}else{

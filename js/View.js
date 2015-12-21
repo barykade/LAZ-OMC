@@ -121,6 +121,13 @@ MapEditor.View = (function() {
         saveMap();
     });
 
+    $(".savedReplayButton").click(function(){
+        var moveQueueData = JSON.parse(replayData[$(this).attr("id")]);
+        var boardStateData = JSON.parse(replayBoardStates[$(this).attr("id")]);
+        model.setMoveQueue(moveQueueData);
+        model.setBoardState(boardStateData);
+    });
+
     $("div.moveModeColor").click(function(e) {
         e.preventDefault();
         e.stopImmediatePropagation();

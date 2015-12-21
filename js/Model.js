@@ -188,6 +188,11 @@ MapEditor.Model = (function() {
             var hexes = grid.getClasses();
             return {hexes: hexes, wits: wits.slice(0), selectedColor: selectedColor};
         },
+        setBoardState = function(value){
+            grid.setClasses(value.hexes, ctx);
+            wits = value.wits;
+            selectedColor = value.selectedColor;
+        },
         popMove = function(){
             if(moveQueue.length == 0) return null;
             forwardMoveQueue.push(getBoardState());
@@ -224,8 +229,8 @@ MapEditor.Model = (function() {
             return boardState.hexes;
         },
 
-        setMoveQueue = function(moveQueue){
-            moveQueue = moveQueue;
+        setMoveQueue = function(value){
+            moveQueue = value;
         };
 
     return {
@@ -267,7 +272,9 @@ MapEditor.Model = (function() {
         setWitsForColor: setWitsForColor,
         setWitsForPlayer: setWitsForPlayer,
         getBoardState: getBoardState,
+        setBoardState: setBoardState,
         getMoveQueue: getMoveQueue,
+        setMoveQueue: setMoveQueue,
         isBaseSelected: function() { return selectedClass.match(/^b$/); }
     }
 })();

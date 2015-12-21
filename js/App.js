@@ -22,8 +22,18 @@ function preload() {
 
 var saveReplayAs = function(replayName){
     var replayData = JSON.stringify(MapEditor.Model.getMoveQueue());
+    var boardState = JSON.stringify(MapEditor.Model.getBoardState());
     if(replayName != "" && replayData != "[]"){
-        alert("Replay Save Post Data Here");
+        $.post("posts.php", {"action":"saveAsNewReplay", "mapId":currentMapId, "replayName":replayName, "replayData":replayData, "boardState":boardState}, function(response){
+            var json = JSON.parse(response);
+
+            if(json.error) {
+                alert(json.errormessage);
+                return;
+            }
+
+            location.href = "load-map.php?mapId="+json.mapId;
+        });
     }
 }
 

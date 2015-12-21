@@ -48,7 +48,19 @@ if($postAction == "saveAsNewMap"){
 		echo '{"status":"failure: Cannot overwrite base maps"}';
 	}
 }else if($postAction == "saveAsNewReplay"){
+	$mapId = $_POST["mapId"];
+	if($mapId > 6){
+		$replayName = $_POST["replayName"];
+		$replayData = $_POST["replayData"];
+		$boardState = $_POST["boardState"];
+		$sql = "INSERT INTO replays
+				VALUES (NULL, '$mapId', '$replayName', '$replayData', '$boardState');";
+		$query = mysql_query($sql);
 
+		echo '{"status":"success", "mapId":'.$mapId.'}';
+	}else{
+		echo '{"status":"failure: Cannot save replays on base maps"}';
+	}
 }else if($postAction == "overwriteReplay"){
 
 }else if($postAction == "deleteReplay"){

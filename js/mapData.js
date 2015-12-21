@@ -1,5 +1,7 @@
 var baseMapsId;
 var currentMapId;
+var replayData;
+var replayBoardStates;
 function loadMapData(mapName, mapTheme, mapData){
 	
     var json = JSON.parse(mapData);
