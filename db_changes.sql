@@ -3,7 +3,7 @@ CREATE DATABASE laz_omc;
 USE laz_omc;
 
 CREATE TABLE `base_maps` (
-  `base_maps_id` int(11) NOT NULL,
+  `base_maps_id` int(11) NOT NULL AUTO_INCREMENT,
   `map_name` varchar(35) NOT NULL,
   `map_theme` int(11) NOT NULL,
   PRIMARY KEY (base_maps_id)
@@ -21,7 +21,7 @@ ALTER TABLE `base_maps`
   MODIFY `base_maps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 CREATE TABLE `maps` (
-  `map_id` int(11) NOT NULL,
+  `map_id` int(11) NOT NULL AUTO_INCREMENT,
   `base_maps_id` int(11) NOT NULL,
   `map_data` text NOT NULL,
   `player_1_race` varchar(16) NOT NULL,
@@ -50,7 +50,7 @@ ALTER TABLE `maps`
 
 
 CREATE TABLE `replays` (
-  `replays_id` int(11) NOT NULL,
+  `replays_id` int(11) NOT NULL AUTO_INCREMENT,
   `map_id` int(11) NOT NULL,
   `replay_name` varchar(35) NOT NULL,
   `replay_data` longtext NOT NULL,
