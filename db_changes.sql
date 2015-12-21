@@ -48,3 +48,13 @@ INSERT INTO `maps` (`map_id`, `base_maps_id`, `map_data`, `player_1_race`, `play
 ALTER TABLE `maps`
   MODIFY `map_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
+
+CREATE TABLE `replays` (
+  `replays_id` int(11) NOT NULL,
+  `map_id` int(11) NOT NULL,
+  `replay_name` varchar(35) NOT NULL,
+  `replay_data` longtext NOT NULL,
+  `current_board_state` text NOT NULL,
+  PRIMARY KEY (replays_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
