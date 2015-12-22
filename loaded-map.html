@@ -172,9 +172,10 @@
 <?php
 			for($i = 0; $i < count($replayArray); $i++){
 ?>
-				<button id=<?php echo $i;?> class="savedReplayButton" style = "width:237px; margin-bottom:5px;">
+				<button id=<?php echo $i;?> class="savedReplayButton" style = "width:197px; margin-bottom:5px;">
 					<?php echo $replayArray[$i]['replayName']; ?>
 				</button>
+				<button id=<?php echo '"'.$replayArray[$i]['replayId'].'"'; ?> class="deleteReplayButton" title=<?php echo '"'.$replayArray[$i]['replayName'].'"'; ?> style="width:35px; margin-bottom:5px;">X</button>
 				<br>
 <?php
 			}

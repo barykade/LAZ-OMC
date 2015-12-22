@@ -113,12 +113,21 @@ MapEditor.View = (function() {
         saveReplayAs(replayName);
     });
 
+    $(".deleteReplayButton").click(function(){
+        if(confirm("Do you want to delete replay \"" + $(this).attr("title") + "\"")){
+            var replayId = $(this).attr("id");
+            deleteReplay(replayId);
+        }
+    });
+
     $("#saveAsNewMapBtn").click(function(){
         saveAsNewMap();
     });
 
     $("#saveMapBtn").click(function(){
-        saveMap();
+        if(confirm("Do you want to save and overwrite the current map")){
+            saveMap();
+        }
     });
 
     $(".savedReplayButton").click(function(){

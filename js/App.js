@@ -37,6 +37,19 @@ var saveReplayAs = function(replayName){
     }
 }
 
+var deleteReplay = function(id){ 
+    $.post("posts.php", {"action":"deleteReplay", "mapId":currentMapId, "replayId":id}, function(response){
+        var json = JSON.parse(response);
+
+        if(json.error) {
+            alert(json.errormessage);
+            return;
+        }
+
+        location.href = "load-map.php?mapId="+json.mapId;
+    });
+}
+
 var saveAsNewMap = function(){
     var mapData = JSON.stringify(grid.getClasses());
     var playerRaces = MapEditor.Model.getAllPlayerRaces();

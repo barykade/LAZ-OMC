@@ -61,9 +61,13 @@ if($postAction == "saveAsNewMap"){
 	}else{
 		echo '{"status":"failure: Cannot save replays on base maps"}';
 	}
-}else if($postAction == "overwriteReplay"){
-
 }else if($postAction == "deleteReplay"){
-	
+	$mapId = $_POST["mapId"];
+	$replayId = $_POST["replayId"];
+	$sql = "DELETE FROM replays
+			WHERE replays_id=$replayId";
+	$query = mysql_query($sql);
+
+	echo '{"status":"success", "mapId":'.$mapId.'}';
 }
 ?>

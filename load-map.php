@@ -17,13 +17,14 @@ if(isset($_GET["mapId"])){
 	$playerRaces = array($result["player_1_race"], $result["player_2_race"], $result["player_3_race"], $result["player_4_race"]);
 	$playerWits = array($result["player_1_wits"], $result["player_2_wits"], $result["player_3_wits"], $result["player_4_wits"]);
 	
-	$sql = "SELECT replay_name, replay_data, current_board_state
+	$sql = "SELECT replays_id, replay_name, replay_data, current_board_state
 			FROM replays
 			WHERE map_id=$mapId;";
 	$query = mysql_query($sql);
 	$replayArray = array();
 	$i = 0;
 	while($row = mysql_fetch_assoc($query)){
+		$replayArray[$i]['replayId'] = $row['replays_id'];
 		$replayArray[$i]['replayName'] = $row['replay_name'];
 		$replayArray[$i]['replayData'] = $row['replay_data'];
 		$replayArray[$i]['currentBoardState'] = $row['current_board_state'];
