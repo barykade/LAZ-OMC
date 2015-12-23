@@ -4,7 +4,7 @@ LAZ outwitters map creator and strategy planner
 
 TODO:
 
-- Save Replays
+- ~~Save Replays~~
 - Set starting player so 2nd player gets 7 wits on first turn and 4th player gets 6 wits on first turn
 - Add Player Names
 - ~~Add image of player races into turn mode and place mode~~
