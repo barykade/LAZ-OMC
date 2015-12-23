@@ -16,3 +16,4 @@ TODO:
   - ~~move mode: player races~~
 - Save which player is current turn in database
 - Bug where killing anything on spawn point disables the spawn point for the turn
+  - There is another bug with spawn points not working, but I'm not sure how to reproduce it
